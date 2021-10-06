@@ -1,0 +1,51 @@
+@import "../../styles/colors.scss";
+.o-card-figure-container {
+  padding: 3%;
+  width: 33.33%;
+  box-sizing: border-box;
+  &__content {
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 4px;
+    padding: 4%;
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    &__figures {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.o-figure-default {
+  background-color: #c2c2c2;
+
+  border-color: #bdbdbd;
+}
+.o-figure-active {
+  border-color: rgb(42, 173, 82);
+  background-color: rgb(110, 203, 219);
+}
+.o-figure {
+  border: 2px solid #bdbdbd;
+  border-radius: 4px;
+  height: 30px;
+  width: 15%;
+  min-height: 30px;
+  min-width: 30px;
+
+  margin: 1%;
+}
+.o-icon {
+  width: 24px;
+  height: 24px;
+  color: #c51212;
+}
+
+@media (max-width: 600px) {
+}

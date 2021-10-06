@@ -1,0 +1,205 @@
+@import "../../styles/colors.scss";
+.o-bg-container {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .o-modal {
+    box-sizing: border-box;
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px $color-shadow;
+    -moz-box-shadow: 0 5px 10px 0px $color-shadow;
+    -webkit-box-shadow: 0 5px 10px 0px $color-shadow;
+    -o-box-shadow: 0 5px 10px 0px $color-shadow;
+    -ms-box-shadow: 0 5px 10px 0px $color-shadow;
+
+    .o-form {
+      width: 100%;
+      img {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+
+      &__field {
+        position: relative;
+        width: 100%;
+
+        line-height: 44px;
+        margin-bottom: 17.5px;
+
+        label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+
+          transition: 0.2s all;
+          cursor: text;
+        }
+        .o-label-color-normal {
+          color: $color-input-default;
+        }
+        .o-label-color-error {
+          color: $color-input-error;
+        }
+        .o-label-change {
+          font-size: 14px;
+          top: -24px;
+          color: $color-input-succes;
+        }
+        .o-label-error {
+          font-size: 14px;
+          top: -24px;
+          color: $color-input-error;
+        }
+        .o-input-error {
+          border-bottom: 2px solid $color-input-error;
+        }
+        input {
+          width: 100%;
+          border: 0;
+          outline: 0;
+          padding: 0.5rem 0;
+          border-bottom: 1px solid $color-input-default;
+          box-shadow: none;
+          color: #111;
+        }
+        input:invalid {
+          outline: 0;
+        }
+        input:focus,
+        input:valid {
+          border-color: $color-input-succes;
+        }
+        input:focus ~ label,
+        input:valid ~ label {
+          font-size: 14px;
+          top: -24px;
+          color: $color-input-succes;
+        }
+      }
+
+      &__button {
+        width: 100%;
+        padding-top: 24px;
+
+        button {
+          position: relative;
+          margin: 0;
+          padding: 5px 12px;
+          height: 45px;
+          width: 100%;
+          outline: none;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          text-transform: uppercase;
+          background-color: #ffffff;
+          border: 1px solid $color-border-button;
+          border-radius: 10px;
+          color: $font-blue;
+          font-weight: 400;
+          font-size: 20px;
+          font-family: inherit;
+          z-index: 0;
+          overflow: hidden;
+
+          span {
+            color: $font-blue;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.7px;
+          }
+        }
+
+        button:hover {
+          animation: rotate 0.7s ease-in-out both;
+          span {
+            -webkit-animation: storm 0.7s ease-in-out both;
+            animation: storm 0.7s ease-in-out both;
+            animation-delay: 0s;
+            -webkit-animation-delay: 0.06s;
+            animation-delay: 0.06s;
+          }
+        }
+        button::before,
+        button::after {
+          box-sizing: border-box;
+        }
+        button::after {
+          position: absolute;
+          right: 0;
+          left: auto;
+          transition: 0.3s;
+          content: "";
+          width: 0;
+          bottom: 0;
+          height: 3px;
+          background: $font-blue;
+        }
+
+        button:hover::after {
+          right: auto;
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    -webkit-transform: rotate(3deg) translate3d(0, 0, 0);
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg) translate3d(0, 0, 0);
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    -webkit-transform: rotate(1deg) translate3d(0, 0, 0);
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+@keyframes storm {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) translateZ(0);
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    -webkit-transform: translate3d(4px, 0, 0) translateZ(0);
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    -webkit-transform: translate3d(-3px, 0, 0) translateZ(0);
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    -webkit-transform: translate3d(2px, 0, 0) translateZ(0);
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) translateZ(0);
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}

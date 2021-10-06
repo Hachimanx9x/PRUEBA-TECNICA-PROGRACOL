@@ -1,0 +1,75 @@
+@import "../../styles/colors.scss";
+
+.o-container-card {
+  width: 100%;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 16px;
+  border-radius: 4px;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+
+  &__info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding-top: 5px;
+  }
+  &__image {
+    width: 50%;
+    display: flex;
+
+    align-self: center;
+    justify-content: center;
+  }
+}
+.o-icon-info {
+  width: 32px;
+  height: 32px;
+  padding: 4;
+}
+
+.o-info-item {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  &__content {
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__text-list {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+    }
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.o-containet-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 189px;
+  }
+}

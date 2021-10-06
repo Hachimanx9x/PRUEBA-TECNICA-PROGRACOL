@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+.o-button-back {
+  width: 64px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #f2f3f7;
+}
+
+.o-icon-back {
+  width: 24px;
+  height: 24px;
+  color: $color-input-succes;
+}

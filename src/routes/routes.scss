@@ -1,0 +1,15 @@
+.o-container {
+  display: flex;
+  flex-direction: row;
+  .o-sidebar {
+    width: 319px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  .o-content {
+    overflow-y: scroll;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+  }
+}

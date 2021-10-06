@@ -1,0 +1,133 @@
+@import "../../styles/colors.scss";
+.o-navbar {
+  background: $bg-blue;
+  position: relative;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.4);
+  min-height: 64px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+
+  &__content {
+    height: 64px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-between;
+    .o-info-app {
+      color: white;
+      display: flex;
+      flex-direction: row;
+      button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        margin-left: 71.5px;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 1.3em;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.o-icon-width {
+  width: 24px;
+}
+.o-icon-white {
+  color: white;
+}
+.o-icon-grey {
+  color: #707070;
+}
+
+.o-dropdowMenu {
+  position: relative;
+
+  div {
+    button {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+    }
+  }
+  &__default {
+    width: 213px;
+    position: absolute;
+    right: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  &__visible {
+    display: block;
+  }
+  &__no-visible {
+    display: none;
+  }
+
+  .o-tilte {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px 16px;
+    position: relative;
+    height: inherit;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+
+    font-size: 1.2em;
+    border-bottom: 1px solid #aaaaaa;
+  }
+}
+
+.o-item-menu {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  span {
+    margin-left: 16px;
+  }
+}
+.o-item-menu:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
