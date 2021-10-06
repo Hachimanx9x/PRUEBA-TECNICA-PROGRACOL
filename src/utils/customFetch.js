@@ -91,3 +91,30 @@ export function getFiguresGroupsAll(token) {
       .then((data) => resolve(data));
   });
 }
+
+export function saveFigure({ token, name, idgroup, positions }) {
+  let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+  myHeaders.append("authorization", token);
+  return new Promise((resolve) => {
+    fetch("https://java.bocetos.co/gamered-0.0.1-SNAPSHOT/figure", {
+      method: "POST",
+      headers: myHeaders,
+      body: JSON.stringify({
+        figureName: name,
+        idFigureGroup: idgroup,
+        positions: positions,
+      }),
+      redirect: "follow",
+    })
+      .then((response) => {
+        if (!response.ok) {
+          console.log(response.status);
+          return { codeStatus: response.status };
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => resolve(data));
+  });
+}

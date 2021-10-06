@@ -7,8 +7,10 @@ import Sidebar from "../components/Sidebar";
 import Desktop from "../pages/Desktop";
 import Profile from "../pages/Profile";
 import Figures from "../pages/Figures";
+import NewFigure from "../pages/NewFigure";
 //scss
 import "./routes.scss";
+
 export default function Routes() {
   return (
     <Router>
@@ -24,7 +26,7 @@ export default function Routes() {
               <Profile />
             </Route>
             <Route exact path="/figures/new">
-              <h2>nueva figura</h2>
+              <NewFigure />
             </Route>
             <Route exact path="/figures">
               <Figures />

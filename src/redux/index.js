@@ -4,7 +4,11 @@ import {
   authLogoutUser,
   getInfoUser,
 } from "./actions/authLogin";
-import { clearfiguresMethod, getfiguresMethod } from "./actions/actionsfigures";
+import {
+  clearfiguresMethod,
+  getfiguresMethod,
+  deleteFigureMethod,
+} from "./actions/actionsfigures";
 import { setGroupFigures } from "./actions/actionsGroups";
 import { selectAuthUser } from "./slices/authLoginUser";
 export {
@@ -15,5 +19,6 @@ export {
   clearfiguresMethod,
   getfiguresMethod,
   setGroupFigures,
+  deleteFigureMethod,
 };
 export default store;

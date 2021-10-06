@@ -15,7 +15,13 @@ export const setGroupFigures = (token) => (dispatch, getState) => {
       dispatch(setUserlog());
       getState();
     } else {
-      dispatch(getGroups(result.data));
+      let newdata = result.data.map((ele) => ({
+        id: ele.id,
+        name: ele.name,
+        oportunity: ele.oportunity,
+        closegame_at: ele.closeAt,
+      }));
+      dispatch(getGroups(newdata));
       getState();
     }
   });

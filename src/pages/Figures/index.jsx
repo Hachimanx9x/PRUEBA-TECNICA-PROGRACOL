@@ -12,7 +12,7 @@ import Container from "./Container";
 import "./figures.scss";
 export default function Figures() {
   const { allfigures } = useSelector((state) => state.getfigures);
-  const { allgroups } = useSelector((state) => state.getGroups);
+  //const { allgroups } = useSelector((state) => state.getGroups);
   const { user, userlog } = useSelector((state) => state.authUser);
 
   const dispatch = useDispatch();
@@ -24,21 +24,23 @@ export default function Figures() {
       dispatch(setGroupFigures(user.Authorization));
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    console.log("acutlizada");
+  }, [allfigures]);
   if (userlog === "error") {
     history.push("/");
   }
-  // console.log(allfigures);
-  //console.log(allgroups);
 
   return (
     <div className="o-container-figures">
       <Container text="Lista con Figuras">
         {allfigures?.map((ele) => (
           <CardFigure
-            key={`cardfig${ele.id}`}
-            id={ele.id}
-            name={ele.name}
-            positions={ele.positions}
+            key={`cardfig${ele?.id}`}
+            id={ele?.id}
+            name={ele?.name}
+            positions={ele?.positions}
           />
         ))}
       </Container>

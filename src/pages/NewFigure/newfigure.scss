@@ -1,0 +1,171 @@
+@import "../../styles/colors.scss";
+.o-container-new-figure {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 23px;
+  &__content {
+    width: 80%;
+
+    &__top-bar {
+      width: 100%;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      box-sizing: border-box;
+
+      &__select {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid $color-border-button;
+        margin-left: 23px;
+        &__option {
+          background-color: white;
+        }
+      }
+    }
+
+    &__contructor-figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__title {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: rgb(255, 204, 204);
+        color: rgb(61, 61, 61);
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.6em;
+        padding: 12px 20px;
+      }
+      &__contructor {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.o-form__field {
+  margin-top: 23px;
+  position: relative;
+  width: 100%;
+
+  line-height: 44px;
+  margin-bottom: 17.5px;
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    transition: 0.2s all;
+    cursor: text;
+  }
+  .o-label-color-normal {
+    color: $color-input-default;
+  }
+  .o-label-color-error {
+    color: $color-input-error;
+  }
+  .o-label-change {
+    font-size: 14px;
+    top: -24px;
+    color: $color-input-succes;
+  }
+  .o-label-error {
+    font-size: 14px;
+    top: -24px;
+    color: $color-input-error;
+  }
+  .o-input-error {
+    border-bottom: 2px solid $color-input-error;
+  }
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $color-input-default;
+    box-shadow: none;
+    color: #111;
+  }
+  input:invalid {
+    outline: 0;
+  }
+  input:focus,
+  input:valid {
+    border-color: $color-input-succes;
+  }
+  input:focus ~ label,
+  input:valid ~ label {
+    font-size: 14px;
+    top: -24px;
+    color: $color-input-succes;
+  }
+}
+.o-form-constructor-figure {
+  margin-top: 18px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.o-figure-block {
+  background-color: #535353;
+  border-color: #222121;
+}
+.o-figure-default {
+  background-color: #c2c2c2;
+
+  border-color: #bdbdbd;
+}
+.o-figure-active {
+  border-color: rgb(44, 202, 91);
+  background-color: rgb(110, 203, 219);
+}
+.o-figure {
+  border: 2px solid #bdbdbd;
+  border-radius: 4px;
+  height: 30px;
+  width: 15%;
+  min-height: 30px;
+  min-width: 30px;
+  cursor: pointer;
+  margin: 1%;
+}
+.o-figure-save {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-right: 7%;
+
+  &__button {
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 36px;
+    border-radius: 6px;
+    border: none;
+  }
+  &__default {
+    background-color: #c2c2c2;
+
+    border-color: #bdbdbd;
+  }
+  &__active {
+    background-color: #3f51b5;
+    color: white;
+    cursor: pointer;
+  }
+}
