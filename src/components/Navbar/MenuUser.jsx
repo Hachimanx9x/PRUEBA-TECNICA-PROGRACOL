@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, createRef } from "react";
+import React, { useState, createRef } from "react";
 import { UserIcon, UserCircle, IconBrush, IconLogout } from "../Icons";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";

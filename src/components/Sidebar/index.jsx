@@ -15,7 +15,7 @@ export default function Sidebar() {
     if (user.Authorization !== "") {
       dispatch(getInfoUser(user.Authorization));
     }
-  }, [user]);
+  }, [user]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div className="o-container-sidebar">
       <div className="o-top-bar-side">

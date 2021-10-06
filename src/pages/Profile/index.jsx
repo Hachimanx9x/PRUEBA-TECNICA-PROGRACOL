@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowLeft } from "../../components/Icons";
+
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./profile.scss";
